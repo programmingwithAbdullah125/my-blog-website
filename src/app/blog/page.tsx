@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 const posts = [
     {
       id: "1",
@@ -64,9 +64,11 @@ const BlogHome = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {posts.map((post) => (
           <div key={post.id} className="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img
+            <Image
               src={post.image}
               alt={post.title}
+              height={48}
+              width={50}
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
